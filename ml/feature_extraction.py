@@ -76,10 +76,12 @@ def zero_crossing_rate(x):
     return float(np.sum(signs[:-1] * signs[1:] < 0) / (x.size - 1))
 
 def cumulative_absolute_velocity(x, dt):
-    return float(np.trapz(np.abs(x), dx=dt)) if x.size else 0.0
+   return float(np.trapezoid(np.abs(x), dx=dt) if x.size else 0.0)
+
 
 def arias_intensity(x, dt):
-    return float(np.trapz(x ** 2, dx=dt)) if x.size else 0.0
+    return float(np.trapezoid(x ** 2, dx=dt) if x.size else 0.0)
+
 
 # ---------------------------------------------------------
 # FREQUENCY FEATURES
