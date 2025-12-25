@@ -1,8 +1,8 @@
-numpy<2.0
-scipy
+numpy
 pandas
+scipy
 scikit-learn
 joblib
-xgboost
 pywavelets
+openpyxl
 streamlit
